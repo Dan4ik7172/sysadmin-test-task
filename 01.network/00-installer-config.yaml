@@ -1,0 +1,27 @@
+network:
+  version: 2
+  ethernets:
+    enp0s3:
+      dhcp4: false
+      dhcp6: true
+      addresses:
+        - 192.168.10.200/24
+      routes:
+        - to: default
+          via: 192.168.10.1
+      nameservers:
+        addresses:
+         - 8.8.8.8
+         - 1.1.1.1
+
+  vlans:
+    vlan10:
+      id: 10
+      link: enp0s3
+      addresses:
+        - 192.168.110.1/24
+    vlan20:
+      id: 20
+      link: enp0s3
+      addresses:
+        - 192.168.120.1/24

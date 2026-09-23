@@ -1,0 +1,8 @@
+[Interface]
+Address = 10.10.10.1/24
+ListenPort = 51820
+PrivateKey = <SERVER_PRIVATE_KEY>
+
+[Peer]
+PublicKey = <WINDOWS_CLIENT_PUBLIC_KEY>
+AllowedIPs = 10.10.10.2/32
